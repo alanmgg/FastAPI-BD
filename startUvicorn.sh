@@ -6,4 +6,4 @@ LOG_PATH="/home/ubuntu/logs"
 
 echo "Starting uvicorn process ..."
 
-python3 -m $UVI_BIN_DIR/uvicorn --app-dir $UVI_PATH main:app --reload --reload-dir $UVI_PATH/ --host '0.0.0.0' --port 8018 > $LOG_PATH/uvicorn.log 2>&1
+python3 -m $UVI_BIN_DIR/uvicorn main:app --reload --host '0.0.0.0' --port 8018 > $LOG_PATH/uvicorn.log 2>&1
