@@ -1,12 +1,12 @@
 [Unit]
-Description=UvicornAPI for Data Base
+Description=Gunicorn Daemon for FastAPI Demo Application
+After=network.target
 
 [Service]
-Type=simple
-ExecStart=/home/ubuntu/FastAPI-BD/startUvicorn.sh
-#ExecStop=/home/ubuntu/FastAPI-BD/stopUvicorn.sh
-KillMode=mixed
-Restart=always
+User=demo
+Group=www-data
+WorkingDirectory=/home/ubuntu/FastAPI-BD/
+ExecStart=/home/ubuntu/FastAPI-BD/venv/bin/gunicorn -c gunicorn_conf.py main:app
 
 [Install]
 WantedBy=multi-user.target
