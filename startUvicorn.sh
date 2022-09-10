@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 UVI_BIN_DIR="/home/ubuntu/.local/bin"
-UVI_PATH="/home/ubuntu"
+UVI_PATH="/home/ubuntu/FastAPI-BD"
 
 echo "Starting uvicorn process ..."
 
