@@ -1,12 +1,13 @@
 [Unit]
-Description=Gunicorn Daemon for FastAPI Demo Application
+Description=GuvicornAPI for GcS Service
 After=network.target
 
 [Service]
-User=demo
-Group=www-data
+Type=simple
 WorkingDirectory=/home/ubuntu/FastAPI-BD/
 ExecStart=gunicorn main:app -k uvicorn.workers.UvicornWorker
+KillMode=mixed
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
