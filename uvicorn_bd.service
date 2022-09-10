@@ -6,7 +6,7 @@ After=network.target
 User=demo
 Group=www-data
 WorkingDirectory=/home/ubuntu/FastAPI-BD/
-ExecStart=/home/ubuntu/FastAPI-BD/venv/bin/gunicorn -c gunicorn_conf.py main:app
+ExecStart=gunicorn main:app -k uvicorn.workers.UvicornWorker
 
 [Install]
 WantedBy=multi-user.target
