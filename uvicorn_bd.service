@@ -3,8 +3,8 @@ Description=UvicornAPI for Data Base
 
 [Service]
 Type=simple
-ExecStart=/home/ubuntu/startUvicorn.sh
-#ExecStop=/home/ubuntu/stopUvicorn.sh
+ExecStart=/home/ubuntu/FastAPI-BD/startUvicorn.sh
+#ExecStop=/home/ubuntu/FastAPI-BD/stopUvicorn.sh
 KillMode=mixed
 Restart=always
 
