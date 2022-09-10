@@ -1,6 +1,5 @@
 [Unit]
 Description=GuvicornAPI for GcS Service
-After=network.target
 
 [Service]
 Type=simple
