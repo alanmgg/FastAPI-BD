@@ -16,9 +16,8 @@ app.add_middleware(
 
 @router.get("/", tags=["Base"])
 async def read_root():
-    return {"Welcome": "FastAPI Server BD"}
+    return { "hello": "Hello, world!" }
 
-
-@router.get("/items/{item_id}", tags=["Base"])
-async def read_item(item_id: int):
-    return {"item_id": item_id}
+@router.get("/ping", tags=["Base"])
+async def ping():
+    return { "ping": "pong" }
