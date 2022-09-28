@@ -11,7 +11,7 @@ Start FastAPI.
 ```bash
 cd /opt
 mkdir app
-cd FastAPI-BD/apiServer
+cd /home/(username)/FastAPI-BD/apiServer
 pip3 install -r requirements.txt
 cd ..
 uvicorn apiServer:app --reload
