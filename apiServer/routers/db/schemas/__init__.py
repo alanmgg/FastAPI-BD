@@ -6,7 +6,12 @@ from pydantic import BaseModel
 class Status(BaseModel):
     message: str
 
-class Pruebas(BaseModel):
-    prueba_id: Optional[int]
-    name: str
-    description: str
+class Clientes(BaseModel):
+    id_cliente: Optional[int]
+    nombre: str
+    ap_paterno: str
+    ap_materno: str
+    email: str
+    telefono: int
+    direccion: str
+    password: str

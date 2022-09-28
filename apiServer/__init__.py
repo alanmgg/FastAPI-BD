@@ -14,13 +14,13 @@ The Books API helps you do things for the proper functioning of a page in books 
 ## Base
 You can **know if the API is active**.
 
-## Prueba
+## Cliente
 You will be able to:
-* Insert data from **prueba** (_implemented_).
-* Get data from **prueba** (_implemented_).
-* Get a single data from **prueba** (_implemented_).
-* Update a single data of **prueba** (_implemented_).
-* Delete a single data from **prueba** (_implemented_).
+* Insert data from **cliente** (_implemented_).
+* Get data from **cliente** (_implemented_).
+* Get a single data from **cliente** (_implemented_).
+* Update a single data of **cliente** (_implemented_).
+* Delete a single data from **cliente** (_implemented_).
 """
 
 app = FastAPI(
@@ -33,7 +33,7 @@ app = FastAPI(
         "description": "Routes to know if the API is active"
     },
     {
-        "name": "Prueba",
+        "name": "Cliente",
         "description": "Routes to know if the API is active"
     }],
     contact={
@@ -56,7 +56,6 @@ app.add_middleware(
 )
 
 app.include_router(routers.base.router)
-app.include_router(routers.prueba.router)
-# app.include_router(routers.user.router)
+app.include_router(routers.cliente.router)
 
 app.mount("/app", StaticFiles(directory=env.APP_DIR_WINDOWS, html=True), name="static")
