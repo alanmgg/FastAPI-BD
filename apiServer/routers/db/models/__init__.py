@@ -14,3 +14,12 @@ class Cliente(Base):
     telefono = Column(Integer)
     direccion = Column(String)
     password = Column(String)
+
+class Autor(Base):
+    __tablename__ = 'autor'
+
+    id_autor = Column(Integer, primary_key=True, index=True)
+    nombre = Column(String)
+    ap_paterno = Column(String)
+    ap_materno = Column(String)
+    pais = Column(String)

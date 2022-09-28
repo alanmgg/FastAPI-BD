@@ -35,6 +35,10 @@ app = FastAPI(
     {
         "name": "Cliente",
         "description": "Routes to know if the API is active"
+    },
+    {
+        "name": "Autor",
+        "description": "Routes to know if the API is active"
     }],
     contact={
         "name": "AFMG",
@@ -57,5 +61,6 @@ app.add_middleware(
 
 app.include_router(routers.base.router)
 app.include_router(routers.cliente.router)
+app.include_router(routers.autor.router)
 
-app.mount("/app", StaticFiles(directory=env.APP_DIR, html=True), name="static")
+app.mount("/app", StaticFiles(directory=env.APP_DIR_WINDOWS, html=True), name="static")

@@ -15,3 +15,10 @@ class Clientes(BaseModel):
     telefono: int
     direccion: str
     password: str
+
+class Autores(BaseModel):
+    id_autor: Optional[int]
+    nombre: str
+    ap_paterno: str
+    ap_materno: str
+    pais: str
