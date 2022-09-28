@@ -4,6 +4,7 @@ This is a simple example FastAPI application that pretends to be a bookstore.
 
 Clone the FastAPI server app.
 ```bash
+cd /home/(username)
 git clone https://github.com/alanmgg/FastAPI-BD.git
 ```
 
