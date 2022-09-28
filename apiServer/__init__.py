@@ -58,4 +58,4 @@ app.add_middleware(
 app.include_router(routers.base.router)
 app.include_router(routers.cliente.router)
 
-app.mount("/app", StaticFiles(directory=env.APP_DIR_WINDOWS, html=True), name="static")
+app.mount("/app", StaticFiles(directory=env.APP_DIR, html=True), name="static")
