@@ -14,6 +14,22 @@ The Books API helps you do things for the proper functioning of a page in books 
 ## Base
 You can **know if the API is active**.
 
+## Autor
+You will be able to:
+* Insert data from **autor** (_implemented_).
+* Get data from **autor** (_implemented_).
+* Get a single data from **autor** (_implemented_).
+* Update a single data of **autor** (_implemented_).
+* Delete a single data from **autor** (_implemented_).
+
+## Categoria
+You will be able to:
+* Insert data from **categoria** (_implemented_).
+* Get data from **categoria** (_implemented_).
+* Get a single data from **categoria** (_implemented_).
+* Update a single data of **categoria** (_implemented_).
+* Delete a single data from **categoria** (_implemented_).
+
 ## Cliente
 You will be able to:
 * Insert data from **cliente** (_implemented_).
@@ -22,13 +38,21 @@ You will be able to:
 * Update a single data of **cliente** (_implemented_).
 * Delete a single data from **cliente** (_implemented_).
 
-## Autor
+## Editorial
 You will be able to:
-* Insert data from **autor** (_implemented_).
-* Get data from **autor** (_implemented_).
-* Get a single data from **autor** (_implemented_).
-* Update a single data of **autor** (_implemented_).
-* Delete a single data from **autor** (_implemented_).
+* Insert data from **editorial** (_implemented_).
+* Get data from **editorial** (_implemented_).
+* Get a single data from **editorial** (_implemented_).
+* Update a single data of **editorial** (_implemented_).
+* Delete a single data from **editorial** (_implemented_).
+
+## Libro
+You will be able to:
+* Insert data from **libro** (_implemented_).
+* Get data from **libro** (_implemented_).
+* Get a single data from **libro** (_implemented_).
+* Update a single data of **libro** (_implemented_).
+* Delete a single data from **libro** (_implemented_).
 """
 
 app = FastAPI(
@@ -41,11 +65,23 @@ app = FastAPI(
         "description": "Routes to know if the API is active"
     },
     {
+        "name": "Autor",
+        "description": "Routes to know if the API is active"
+    },
+    {
+        "name": "Categoria",
+        "description": "Routes to know if the API is active"
+    },
+    {
         "name": "Cliente",
         "description": "Routes to know if the API is active"
     },
     {
-        "name": "Autor",
+        "name": "Editorial",
+        "description": "Routes to know if the API is active"
+    },
+    {
+        "name": "Libro",
         "description": "Routes to know if the API is active"
     }],
     contact={
@@ -68,7 +104,10 @@ app.add_middleware(
 )
 
 app.include_router(routers.base.router)
-app.include_router(routers.cliente.router)
 app.include_router(routers.autor.router)
+app.include_router(routers.categoria.router)
+app.include_router(routers.cliente.router)
+app.include_router(routers.editorial.router)
+app.include_router(routers.libro.router)
 
 app.mount("/app", StaticFiles(directory=env.APP_DIR_WINDOWS, html=True), name="static")

@@ -6,6 +6,17 @@ from pydantic import BaseModel
 class Status(BaseModel):
     message: str
 
+class Autores(BaseModel):
+    id_autor: Optional[int]
+    nombre: str
+    ap_paterno: str
+    ap_materno: str
+    pais: str
+
+class Categorias(BaseModel):
+    id_categoria: Optional[int]
+    nombre: str
+
 class Clientes(BaseModel):
     id_cliente: Optional[int]
     nombre: str
@@ -16,9 +27,21 @@ class Clientes(BaseModel):
     direccion: str
     password: str
 
-class Autores(BaseModel):
-    id_autor: Optional[int]
-    nombre: str
-    ap_paterno: str
-    ap_materno: str
+class Editoriales(BaseModel):
+    id_editorial: Optional[int]
     pais: str
+    nombre: str
+
+class Libros(BaseModel):
+    id_libro: Optional[int]
+    num_paginas: int
+    anio: int
+    isbn: str
+    nombre: str
+    estado: str
+    resenia: str
+    precio: int
+    stock: int
+    id_autor: int
+    id_editorial: int
+    id_categoria: int
