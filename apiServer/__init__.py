@@ -21,6 +21,14 @@ You will be able to:
 * Get a single data from **cliente** (_implemented_).
 * Update a single data of **cliente** (_implemented_).
 * Delete a single data from **cliente** (_implemented_).
+
+## Autor
+You will be able to:
+* Insert data from **autor** (_implemented_).
+* Get data from **autor** (_implemented_).
+* Get a single data from **autor** (_implemented_).
+* Update a single data of **autor** (_implemented_).
+* Delete a single data from **autor** (_implemented_).
 """
 
 app = FastAPI(
