@@ -110,4 +110,4 @@ app.include_router(routers.cliente.router)
 app.include_router(routers.editorial.router)
 app.include_router(routers.libro.router)
 
-app.mount("/app", StaticFiles(directory=env.APP_DIR_WINDOWS, html=True), name="static")
+app.mount("/app", StaticFiles(directory=env.APP_DIR, html=True), name="static")
