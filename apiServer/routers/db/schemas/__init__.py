@@ -10,7 +10,7 @@ class Autores(BaseModel):
     id_autor: Optional[int]
     nombre: str
     ap_paterno: str
-    ap_materno: str
+    ap_materno: Optional[str]
     pais: str
 
 class Categorias(BaseModel):
@@ -26,6 +26,14 @@ class Clientes(BaseModel):
     telefono: int
     direccion: str
     password: str
+
+class Compras(BaseModel):
+    id_compra: Optional[int]
+    fecha: datetime
+    precio: int
+    cantidad: int
+    id_libro: int
+    id_cliente: int
 
 class Editoriales(BaseModel):
     id_editorial: Optional[int]
@@ -45,3 +53,11 @@ class Libros(BaseModel):
     id_autor: int
     id_editorial: int
     id_categoria: int
+
+class Tarjetas(BaseModel):
+    id_tarjeta: Optional[int]
+    num_tarjeta: int
+    anio: int
+    mes: int
+    nombre: str
+    id_cliente: int

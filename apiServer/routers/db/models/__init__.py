@@ -30,6 +30,16 @@ class Cliente(Base):
     direccion = Column(String)
     password = Column(String)
 
+class Compra(Base):
+    __tablename__ = 'compra'
+
+    id_compra = Column(Integer, primary_key=True, index=True)
+    fecha = Column(DateTime)
+    precio = Column(Integer)
+    cantidad = Column(Integer)
+    id_libro = Column(Integer)
+    id_cliente = Column(Integer)
+
 class Editorial(Base):
     __tablename__ = 'editorial'
 
@@ -52,3 +62,13 @@ class Libro(Base):
     id_autor = Column(Integer)
     id_editorial = Column(Integer)
     id_categoria = Column(Integer)
+
+class Tarjeta(Base):
+    __tablename__ = 'tarjeta'
+
+    id_tarjeta = Column(Integer, primary_key=True, index=True)
+    num_tarjeta = Column(Integer)
+    anio = Column(Integer)
+    mes = Column(Integer)
+    nombre = Column(String)
+    id_cliente = Column(Integer)
