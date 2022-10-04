@@ -6,3 +6,6 @@ MYSQL_CONNECTION = "mysql+pymysql://admin:MalopeFI3#DB@db-oracle.cln5k8wdcnlt.us
 
 IMAGE_DIR = "/home/ubuntu/FastAPI-BD/images/"
 IMAGE_DIR_WINDOWS = "/images/"
+
+IMAGE_PATH = "/home/ubuntu/FastAPI-BD"
+IMAGE_PATH_WINDOWS = ""

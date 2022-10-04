@@ -45,9 +45,9 @@ def get_image(id_image: int, db: Session = Depends(get_db)):
     if db_image is None:
         raise HTTPException(status_code=404, detail="Image not found")
     if getcwd()[-1] != '/':
-        return FileResponse(getcwd() + '/' + db_image.path)
+        return FileResponse(getcwd() + env.IMAGE_PATH_WINDOWS + db_image.path)
     else:
-        return FileResponse(getcwd() + db_image.path)
+        return FileResponse(getcwd() + env.IMAGE_PATH + db_image.path)
 
 @router.delete("/images/{name_image}", tags=["Image"], response_model=db_module.schemas.Status)
 def delete_image(name_image: str):
