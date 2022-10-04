@@ -9,8 +9,8 @@ def get_clientes(db: Session, skip: int = 0, limit: int = 100):
 def get_cliente(db: Session, id_cliente: int):
     return db.query(models.Cliente).filter(models.Cliente.id_cliente == id_cliente).first()
 
-# def get_user_by_username(db: Session, username: str):
-#     return db.query(models.User).filter(models.User.name == username).first()
+def get_client_by_email(db: Session, email: str):
+    return db.query(models.Cliente).filter(models.Cliente.email == email).first()
 
 def create_cliente(db: Session, cliente: schemas.Clientes):
     db_cliente = models.Cliente(**cliente.dict())

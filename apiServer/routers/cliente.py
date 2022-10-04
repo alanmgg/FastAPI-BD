@@ -27,6 +27,15 @@ def get_cliente(id_cliente: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Cliente not found")
     return db_cliente
 
+@router.get("/clientes/{email}/{password}", tags=["Cliente"])
+def get_client_by_email(email: str, password: str, db: Session = Depends(get_db)):
+    db_cliente = db_module.crud_cliente.get_client_by_email(db, email=email)
+    if db_cliente is None:
+        raise HTTPException(status_code=404, detail="Client not found")
+    elif db_cliente.password != password:
+        raise HTTPException(status_code=404, detail="Wrong email or password")
+    return db_cliente
+
 @router.post("/clientes", tags=["Cliente"])
 async def create_cliente(cliente: db_module.schemas.Clientes, db: Session = Depends(get_db)):
     return db_module.crud_cliente.create_cliente(db=db, cliente=cliente)
