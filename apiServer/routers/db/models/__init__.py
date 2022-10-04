@@ -29,6 +29,7 @@ class Cliente(Base):
     telefono = Column(Integer)
     direccion = Column(String)
     password = Column(String)
+    id_image = Column(Integer)
 
 class Compra(Base):
     __tablename__ = 'compra'
@@ -46,6 +47,12 @@ class Editorial(Base):
     id_editorial = Column(Integer, primary_key=True, index=True)
     pais = Column(String)
     nombre = Column(String)
+
+class Image(Base):
+    __tablename__ = 'image'
+
+    id_image = Column(Integer, primary_key=True, index=True)
+    path = Column(String)
 
 class Libro(Base):
     __tablename__ = 'libro'

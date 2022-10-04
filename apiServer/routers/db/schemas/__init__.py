@@ -26,6 +26,7 @@ class Clientes(BaseModel):
     telefono: int
     direccion: str
     password: str
+    id_image: int
 
 class Compras(BaseModel):
     id_compra: Optional[int]
@@ -39,6 +40,10 @@ class Editoriales(BaseModel):
     id_editorial: Optional[int]
     pais: str
     nombre: str
+
+class Images(BaseModel):
+    id_image: Optional[int]
+    path: str
 
 class Libros(BaseModel):
     id_libro: Optional[int]

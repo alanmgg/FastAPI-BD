@@ -3,3 +3,4 @@ uvicorn
 mangum
 sqlalchemy
 pymysql
+python-multipart

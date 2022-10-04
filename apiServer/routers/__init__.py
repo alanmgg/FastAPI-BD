@@ -4,5 +4,6 @@ from . import categoria
 from . import cliente
 from . import compra
 from . import editorial
+from . import image
 from . import libro
 from . import tarjeta

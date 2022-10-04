@@ -54,6 +54,12 @@ You will be able to:
 * Update a single data of **editorial** (_implemented_).
 * Delete a single data from **editorial** (_implemented_).
 
+## Image
+You will be able to:
+* Insert data from **image** (_implemented_).
+* Get a single data from **image** (_implemented_).
+* Delete a single data from **image** (_implemented_).
+
 ## Libro
 You will be able to:
 * Insert data from **libro** (_implemented_).
@@ -101,6 +107,10 @@ app = FastAPI(
         "description": "Routes to know if the API is active"
     },
     {
+        "name": "Image",
+        "description": "Routes to know if the API is active"
+    },
+    {
         "name": "Libro",
         "description": "Routes to know if the API is active"
     },
@@ -133,6 +143,7 @@ app.include_router(routers.categoria.router)
 app.include_router(routers.cliente.router)
 app.include_router(routers.compra.router)
 app.include_router(routers.editorial.router)
+app.include_router(routers.image.router)
 app.include_router(routers.libro.router)
 app.include_router(routers.tarjeta.router)
 
