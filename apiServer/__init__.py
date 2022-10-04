@@ -147,4 +147,4 @@ app.include_router(routers.image.router)
 app.include_router(routers.libro.router)
 app.include_router(routers.tarjeta.router)
 
-app.mount("/app", StaticFiles(directory=env.APP_DIR, html=True), name="static")
+app.mount("/app", StaticFiles(directory=env.APP_DIR_WINDOWS, html=True), name="static")
