@@ -79,6 +79,7 @@ You will be able to:
 
 app = FastAPI(
     title="Books API",
+    # root_path="/api/v1",
     description=description,
     version="1.0.0",
     openapi_tags=[
