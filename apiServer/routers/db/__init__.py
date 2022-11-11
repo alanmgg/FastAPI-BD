@@ -1,2 +1,2 @@
-from . import models, schemas, crud_autor, crud_categoria, crud_cliente, crud_compra, crud_editorial, crud_image, crud_libro, crud_tarjeta
+from . import middlewares, models, schemas, crud_auth, crud_autor, crud_categoria, crud_cliente, crud_compra, crud_editorial, crud_image, crud_libro, crud_tarjeta, middleware
 from .database import SessionLocal, engine

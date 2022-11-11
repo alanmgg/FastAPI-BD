@@ -4,3 +4,5 @@ mangum
 sqlalchemy
 pymysql
 python-multipart
+pyjwt
+email-validator

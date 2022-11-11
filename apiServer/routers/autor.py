@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from . import db as db_module
 
-router = APIRouter()
+router = APIRouter(route_class=db_module.middleware.VerifyToken)
 
 # Dependency
 def get_db():

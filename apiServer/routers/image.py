@@ -20,8 +20,8 @@ def get_db():
     finally:
         db.close()
 
-@router.post("/upload_images", tags=["Image"], response_model=db_module.schemas.Status)
-async def upload_image(image: UploadFile = File(...)):
+@router.post("/upload-images-perfil", tags=["Image"], response_model=db_module.schemas.Status)
+async def upload_image_perfil(image: UploadFile = File(...)):
     if getcwd()[-1] != '/':
         with open(getcwd() + env.IMAGE_DIR_WINDOWS + image.filename, "wb") as myImage:
             content = await image.read()
@@ -29,6 +29,19 @@ async def upload_image(image: UploadFile = File(...)):
             myImage.close()
     else:
         with open(getcwd() + env.IMAGE_DIR + image.filename, "wb") as myImage:
+            content = await image.read()
+            myImage.write(content)
+            myImage.close()
+
+@router.post("/upload-images-books", tags=["Image"], response_model=db_module.schemas.Status)
+async def upload_image_books(image: UploadFile = File(...)):
+    if getcwd()[-1] != '/':
+        with open(getcwd() + env.IMAGE_DIR_WINDOWS + image.filename, "wb") as myImage:
+            content = await image.read()
+            myImage.write(content)
+            myImage.close()
+    else:
+        with open(getcwd() + env.IMAGE_DIR_BOOK + image.filename, "wb") as myImage:
             content = await image.read()
             myImage.write(content)
             myImage.close()

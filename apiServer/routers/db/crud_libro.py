@@ -27,7 +27,8 @@ def update_libro(db: Session, id_libro: int, libro: schemas.Libros):
     if(db_curr_libro is not None):
         db_curr_libro.num_paginas = db_upd_libro.num_paginas
         db_curr_libro.anio = db_upd_libro.anio
-        db_curr_libro.isbn = db_upd_libro.isbn
+        db_curr_libro.isbn_10 = db_upd_libro.isbn_10
+        db_curr_libro.isbn_13 = db_upd_libro.isbn_13
         db_curr_libro.nombre = db_upd_libro.nombre
         db_curr_libro.estado = db_upd_libro.estado
         db_curr_libro.resenia = db_upd_libro.resenia

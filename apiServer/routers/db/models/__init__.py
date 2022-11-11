@@ -29,6 +29,7 @@ class Cliente(Base):
     telefono = Column(Integer)
     direccion = Column(String)
     password = Column(String)
+    role = Column(String)
     id_image = Column(Integer)
 
 class Compra(Base):
@@ -60,7 +61,8 @@ class Libro(Base):
     id_libro = Column(Integer, primary_key=True, index=True)
     num_paginas = Column(Integer)
     anio = Column(Integer)
-    isbn = Column(String)
+    isbn_10 = Column(Integer)
+    isbn_13 = Column(Integer)
     nombre = Column(String)
     estado = Column(String)
     resenia = Column(String)
@@ -69,6 +71,7 @@ class Libro(Base):
     id_autor = Column(Integer)
     id_editorial = Column(Integer)
     id_categoria = Column(Integer)
+    id_image = Column(Integer)
 
 class Tarjeta(Base):
     __tablename__ = 'tarjeta'

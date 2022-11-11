@@ -1,4 +1,5 @@
 from . import base
+from . import auth
 from . import autor
 from . import categoria
 from . import cliente

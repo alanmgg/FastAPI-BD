@@ -9,124 +9,139 @@ import env
 db.database.Base.metadata.create_all(bind=db.engine)
 
 description = """
-The Books API helps you do things for the proper functioning of a page in books operation 🚀
+The Bookbay API helps you do things for the proper functioning of a page in the book operation. She will be in charge of running the website [www.bookbay.store](https://www.bookbay.store) 🚀
 
 ## Base
-You can **know if the API is active**.
+We will be able to know if the API is in operation or is stopped through various methods. If so, please contact alanfmorag@gmail.com 📧
+
+## Authentication
+With the following routes you can:  
+☑️ Generate a **token**.  
+☑️ Validate a **token**.
 
 ## Autor
-You will be able to:
-* Insert data from **autor** (_implemented_).
-* Get data from **autor** (_implemented_).
-* Get a single data from **autor** (_implemented_).
-* Update a single data of **autor** (_implemented_).
-* Delete a single data from **autor** (_implemented_).
+With the following routes you can:  
+☑️ Insert data from **autor**.  
+☑️ Get data from **autor**.  
+☑️ Get a single data from **autor**.  
+☑️ Update a single data of **autor**.  
+☑️ Delete a single data from **autor**.  
 
 ## Categoria
-You will be able to:
-* Insert data from **categoria** (_implemented_).
-* Get data from **categoria** (_implemented_).
-* Get a single data from **categoria** (_implemented_).
-* Update a single data of **categoria** (_implemented_).
-* Delete a single data from **categoria** (_implemented_).
+With the following routes you can:  
+☑️ Insert data from **categoria**.  
+☑️ Get data from **categoria**.  
+☑️ Get a single data from **categoria**.  
+☑️ Update a single data of **categoria**.  
+☑️ Delete a single data from **categoria**.  
 
 ## Cliente
-You will be able to:
-* Insert data from **cliente** (_implemented_).
-* Get data from **cliente** (_implemented_).
-* Get a single data from **cliente** (_implemented_).
-* Update a single data of **cliente** (_implemented_).
-* Delete a single data from **cliente** (_implemented_).
+With the following routes you can:  
+☑️ Insert data from **cliente**.  
+☑️ Get data from **cliente**.  
+☑️ Get a single data from **cliente**.  
+☑️ Update a single data of **cliente**.  
+☑️ Delete a single data from **cliente**.  
 
 ## Compra
-You will be able to:
-* Insert data from **compra** (_implemented_).
-* Get data from **compra** (_implemented_).
-* Get a single data from **compra** (_implemented_).
-* Update a single data of **compra** (_implemented_).
-* Delete a single data from **compra** (_implemented_).
+With the following routes you can:  
+☑️ Insert data from **compra**.  
+☑️ Get data from **compra**.  
+☑️ Get a single data from **compra**.  
+☑️ Update a single data of **compra**.  
+☑️ Delete a single data from **compra**.  
 
 ## Editorial
-You will be able to:
-* Insert data from **editorial** (_implemented_).
-* Get data from **editorial** (_implemented_).
-* Get a single data from **editorial** (_implemented_).
-* Update a single data of **editorial** (_implemented_).
-* Delete a single data from **editorial** (_implemented_).
+With the following routes you can:  
+☑️ Insert data from **editorial**.  
+☑️ Get data from **editorial**.  
+☑️ Get a single data from **editorial**.  
+☑️ Update a single data of **editorial**.  
+☑️ Delete a single data from **editorial**.  
 
 ## Image
-You will be able to:
-* Insert data from **image** (_implemented_).
-* Get a single data from **image** (_implemented_).
-* Delete a single data from **image** (_implemented_).
+With the following routes you can:  
+☑️ Upload **profile picture**.  
+☑️ Upload **book photo**.  
+☑️ Insert data from **image**.  
+☑️ Get a single data from **image**.  
+☑️ Delete a single data from **image**.  
 
 ## Libro
-You will be able to:
-* Insert data from **libro** (_implemented_).
-* Get data from **libro** (_implemented_).
-* Get a single data from **libro** (_implemented_).
-* Update a single data of **libro** (_implemented_).
-* Delete a single data from **libro** (_implemented_).
+With the following routes you can:  
+☑️ Insert data from **libro**.  
+☑️ Get data from **libro**.  
+☑️ Get a single data from **libro**.  
+☑️ Update a single data of **libro**.  
+☑️ Delete a single data from **libro**.  
 
 ## Tarjeta
-You will be able to:
-* Insert data from **tarjeta** (_implemented_).
-* Get data from **tarjeta** (_implemented_).
-* Get a single data from **tarjeta** (_implemented_).
-* Update a single data of **tarjeta** (_implemented_).
-* Delete a single data from **tarjeta** (_implemented_).
+With the following routes you can:  
+☑️ Insert data from **tarjeta**.  
+☑️ Get data from **tarjeta**.  
+☑️ Get a single data from **tarjeta**.  
+☑️ Update a single data of **tarjeta**.  
+☑️ Delete a single data from **tarjeta**.  
 """
 
-app = FastAPI(
-    title="Books API",
-    # root_path="/api/v1",
-    description=description,
-    version="1.0.0",
-    openapi_tags=[
+openapi_tags = [
     {
         "name": "Base",
         "description": "Routes to know if the API is active"
     },
     {
+        "name": "Authentication",
+        "description": "Routes containing user authentication"
+    },
+    {
         "name": "Autor",
-        "description": "Routes to know if the API is active"
+        "description": "Routes containing the methods to enter authors to the database"
     },
     {
         "name": "Categoria",
-        "description": "Routes to know if the API is active"
+        "description": "Routes containing the methods to enter categories into the database"
     },
     {
         "name": "Cliente",
-        "description": "Routes to know if the API is active"
+        "description": "Routes containing the methods to enter clients into the database"
     },
     {
         "name": "Compra",
-        "description": "Routes to know if the API is active"
+        "description": "Routes containing the methods to enter purchases into the database"
     },
     {
         "name": "Editorial",
-        "description": "Routes to know if the API is active"
+        "description": "Routes containing the methods to enter publishers into the database"
     },
     {
         "name": "Image",
-        "description": "Routes to know if the API is active"
+        "description": "Routes containing the methods to upload images to the server"
     },
     {
         "name": "Libro",
-        "description": "Routes to know if the API is active"
+        "description": "Routes containing the methods to enter books into the database"
     },
     {
         "name": "Tarjeta",
-        "description": "Routes to know if the API is active"
-    }],
+        "description": "Routes containing the methods to enter cards into the database"
+    }
+]
+
+app = FastAPI(
+    title="Bookbay API",
+    root_path="/api/v1",
+    description=description,
+    version="1.0.1",
+    openapi_tags=openapi_tags,
+    terms_of_service="http://example.com/terms/",
     contact={
         "name": "AFMG",
-        "url": "http://alanmg.me/",
+        "url": "https://alanmg.me/",
         "email": "alanfmorag@gmail.com",
     },
     license_info={
-        "name": "Apache 2.0",
-        "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+        "name": "MIT License",
+        "url": "https://raw.githubusercontent.com/alanmgg/FastAPI-BD/main/LICENSE",
     },
 )
 
@@ -139,6 +154,7 @@ app.add_middleware(
 )
 
 app.include_router(routers.base.router)
+app.include_router(routers.auth.router)
 app.include_router(routers.autor.router)
 app.include_router(routers.categoria.router)
 app.include_router(routers.cliente.router)
